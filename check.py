@@ -1,5 +1,5 @@
 import sqlite3
-
+import json
 # Connect to the database
 conn = sqlite3.connect('beanCounter.db')
 cursor = conn.cursor()
@@ -45,4 +45,12 @@ def fetchBeanCount():
     print(beanArray)
 
 fetchBeanCount()
+dataDict = {
+    "good": beanArray[0],
+    "bad": beanArray[1]
+}
+
+with open('beanData.json', 'w') as json_file:
+    json.dump(dataDict, json_file)
+
 conn.close()
