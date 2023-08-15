@@ -1,1 +1,1 @@
-:mag: # Bean placeholder
+:mag: Bean placeholder
