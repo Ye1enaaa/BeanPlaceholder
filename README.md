@@ -1,1 +1,1 @@
-:technologist:
+:mag: # Bean placeholder
