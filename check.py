@@ -45,7 +45,7 @@ fetchBeanCount()
 dataDict = {
     "good": beanArray[0],
     "bad": beanArray[1],
-    "kilograms": ((beanArray[0] + beanArray[1]) * 0.2) / 1000 
+    "kilograms": (beanArray[1] * 0.2) / 1000 
 }
 
 with open('beanData.json', 'w') as json_file:
@@ -54,7 +54,7 @@ with open('beanData.json', 'w') as json_file:
 json_data = json.dumps(dataDict)
 goodBean = beanArray[0]
 badBean = beanArray[1]
-kiloOfBeans = ((beanArray[0] + beanArray[1]) * 0.2) / 1000
+kiloOfBeans = (beanArray[1] * 0.2) / 1000
 formattedKilo = "{:.4f}".format(kiloOfBeans)
 createdAt = datetime.now()
 updatedAt = createdAt
